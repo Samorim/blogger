@@ -36,7 +36,13 @@ public class CadastroUsuarioController implements Serializable {
     public UsuarioVo getUsuarioVo() {
         return usuarioVo;
     }
-
+    
+     public String flowCadastrarUsuario(){
+        return "/usuario/cadastro-usuario";
+    }
+    
+    
+    
     public void setUsuarioVo(UsuarioVo usuarioVo) {
         this.usuarioVo = usuarioVo;
     }
