@@ -22,7 +22,14 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post.html">Sample Post</a>
+                         <h:form>
+                             <h:commandLink value="Cadastrar Post" action="#{cadastrarPostController.flowCadastrarPost()}"></h:commandLink>
+                        </h:form>
+                    </li>
+                    <li class="nav-item">
+                         <h:form>
+                             <h:commandLink value="Login" action="#{acessoController.flowLogin()}"></h:commandLink>
+                        </h:form>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>

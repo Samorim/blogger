@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+
+
+
+    <ui:composition template="/WEB-INF/templates/default-template.xhtml">
+
+        <ui:define name="body">
+            <h:form>
+                <div class="control-group">
+                    <p:messages id="messages" showDetail="false" closable="true">
+                        <p:autoUpdate />
+                    </p:messages>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls">
+                                <label>Titulo</label>
+                                <h:inputText value="#{cadastrarPostController.postvo.titulo}"  pt:placeholder ="Titulo" required="true" requiredMessage="Titulo é Obrigatorio" ></h:inputText>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls">
+                                <label>Resumo</label>
+                                <h:inputText value="#{cadastrarPostController.postvo.resumo}"  pt:placeholder ="Resumo" required="true" requiredMessage="Resumo é Obrigatorio" ></h:inputText>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls">
+                                <label>Texto</label>
+                                <h:inputText value="#{cadastrarPostController.postvo.texto}"  pt:placeholder ="Texto" required="true" requiredMessage="Texto é Obrigatorio" ></h:inputText>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                     
+
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>    
+</html>
+

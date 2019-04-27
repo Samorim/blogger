@@ -5,7 +5,11 @@ import com.blogger.model.usuario.post.PostVo;
 import java.io.Serializable;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
 
+@Named
+@ViewScoped
 public class CadastrarPostController implements Serializable {
 
     private PostBe postBe;
@@ -50,4 +54,7 @@ public class CadastrarPostController implements Serializable {
         this.postVo = postvo;
     }
 
+    public String flowCadastrarPost() {
+        return "/post/cadastro-post";
+    }
 }
