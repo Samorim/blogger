@@ -34,15 +34,15 @@
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
-                                <label>Texto</label>
-                                <h:inputText value="#{cadastrarPostController.postvo.texto}"  pt:placeholder ="Texto" required="true" requiredMessage="Texto é Obrigatorio" ></h:inputText>
+                                <p:textEditor id="editor" widgetVar="editorWidget" value="#{cadastrarPostController.postvo.texto}" height="300"  />
                             </div>
                         </div>
+
 
                     </div>
 
                     <div class="form-group">
-                     
+                        <h:commandButton class="btn btn-primary" value="CADASTRAR POST" action="#{cadastrarPostController.cadastrarPost()}"></h:commandButton>
 
                     </div>
                 </div>

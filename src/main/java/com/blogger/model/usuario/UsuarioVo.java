@@ -1,31 +1,38 @@
-
 package com.blogger.model.usuario;
 
+import com.blogger.model.post.PostVo;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb02_usuario")
-public class UsuarioVo implements Serializable{
-    
+@Table(name = "tb02_usuario")
+public class UsuarioVo implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name ="nome")
+    @Column(name = "nome")
     private String nome;
-    @Column(name ="email")
+    @Column(name = "email")
     private String email;
-    @Column (name = "senha")
+    @Column(name = "senha")
     private String senha;
+
     public UsuarioVo() {
-       
+
     }
 
     @Override
@@ -85,8 +92,20 @@ public class UsuarioVo implements Serializable{
         this.senha = senha;
     }
 
-   
-    
-    
-          
+    @Override
+    public String toString() {
+        return "ID: " + id + " - NOME: " + nome + "email: " + email + "Senha: " + senha;
+    }
+
+    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<PostVo> posts;
+
+    public List<PostVo> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<PostVo> posts) {
+        this.posts = posts;
+    }
+
 }

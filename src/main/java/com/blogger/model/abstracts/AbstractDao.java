@@ -1,9 +1,10 @@
 
 package com.blogger.model.abstracts;
 
+import java.io.Serializable;
 import javax.persistence.EntityManager;
 
-public abstract class AbstractDao {
+public abstract class AbstractDao implements Serializable{
 
     private EntityManager em;
 

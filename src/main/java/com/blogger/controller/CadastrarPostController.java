@@ -24,7 +24,7 @@ public class CadastrarPostController implements Serializable {
     public void cadastrarPost() {
         try {
             getPostBe().cadastrarPost(postVo);
-            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Usuario Salvo", null);
+            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Post Salvo", null);
             FacesContext.getCurrentInstance().addMessage(null, fm);
 
         } catch (Exception e) {
