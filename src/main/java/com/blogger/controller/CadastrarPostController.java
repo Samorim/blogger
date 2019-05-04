@@ -1,7 +1,7 @@
 package com.blogger.controller;
 
-import com.blogger.model.usuario.post.PostBe;
-import com.blogger.model.usuario.post.PostVo;
+import com.blogger.model.post.PostBe;
+import com.blogger.model.post.PostVo;
 import java.io.Serializable;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;

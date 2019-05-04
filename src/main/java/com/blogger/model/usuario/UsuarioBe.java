@@ -1,6 +1,6 @@
 package com.blogger.model.usuario;
 
-import features.persistence.PersistenceProperties;
+import com.blogger.features.persistence.PersistenceProperties;
 import java.io.Serializable;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

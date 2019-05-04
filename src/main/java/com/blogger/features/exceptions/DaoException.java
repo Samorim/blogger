@@ -1,13 +1,13 @@
+package com.blogger.features.exceptions;
 
-package features.exceptions;
+import javax.persistence.NoResultException;
 
-public class DaoExceptions {
-    public class DaoException extends Exception {
+public class DaoException extends Exception {
 
     public DaoException(final String msg) {
         super(msg);
     }
-    
+
     public DaoException(final Exception e) {
         super("Não foi possível acessar a Base de Dados", e);
     }
@@ -16,5 +16,4 @@ public class DaoExceptions {
         super(msg, e);
     }
 
-}
 }

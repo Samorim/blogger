@@ -1,4 +1,4 @@
-package com.blogger.model.usuario.post;
+package com.blogger.model.post;
 
 import java.io.Serializable;
 import java.util.Objects;

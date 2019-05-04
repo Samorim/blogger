@@ -1,6 +1,7 @@
-package features.persistence;
+package com.blogger.features.persistence;
 
-import features.exceptions.DaoExceptions.DaoException;
+
+import com.blogger.features.exceptions.DaoException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
